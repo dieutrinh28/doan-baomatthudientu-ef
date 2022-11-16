@@ -29,7 +29,7 @@ namespace baomatthudientu
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            EnMail Mail = Save.ListEnMail[e.RowIndex];
+            /*EnMail Mail = Save.ListEnMail[e.RowIndex];
             dgv.Rows[e.RowIndex].Cells[0].Value = "Đã đọc";
             lbSender.Text = Mail.sender;
             lbSubject.Text = Mail.subject;
@@ -63,7 +63,7 @@ namespace baomatthudientu
                 }
                 result += s + " ";
             }
-            txbMail.Text = result;
+            txbMail.Text = result;*/
         }
     }
 }

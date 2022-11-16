@@ -1,4 +1,6 @@
-﻿using System;
+﻿using baomatthudientu.DAL;
+using baomatthudientu.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,9 @@ namespace baomatthudientu.BLL
 {
     internal class UserBLL
     {
+        public static List<UserDTO> GetAll()
+        {
+            return UserDAL.GetAll();
+        }
     }
 }

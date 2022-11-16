@@ -1,4 +1,6 @@
-﻿using System;
+﻿using baomatthudientu.BLL;
+using baomatthudientu.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,12 +18,44 @@ namespace baomatthudientu
         {
             InitializeComponent();
         }
+        public bool Login()
+        {
+            List<UserDTO> listUser = UserBLL.GetAll();
+            int count = 0;
+            for(int i = 0; i < listUser.Count; i++)
+            {
+                if(txtUsername.Text.Trim() == listUser[i].UserName.Trim() && txtPassword.Text.Trim() == listUser[i].Password.Trim())
+                {
+                    count++;
+                    break;
+                }
+                
+            }
+            if (count == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormHome form = new FormHome();
-            form.Show();
+            if(Login())
+            {
+                this.Hide();
+                FormHome form = new FormHome();
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại!", "Thông báo");
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+            }
+           
         }
 
         private void btnReset_Click(object sender, EventArgs e)

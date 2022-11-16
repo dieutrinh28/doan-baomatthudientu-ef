@@ -15,3 +15,5 @@ D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\o
 D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.csproj.CopyComplete
 D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.exe
 D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.pdb
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.FormHome.resources
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.FormReadMail.resources
