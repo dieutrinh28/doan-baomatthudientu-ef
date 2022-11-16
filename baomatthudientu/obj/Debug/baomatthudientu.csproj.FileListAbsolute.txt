@@ -1,0 +1,17 @@
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\bin\Debug\baomatthudientu.exe.config
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\bin\Debug\baomatthudientu.exe
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\bin\Debug\baomatthudientu.pdb
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\bin\Debug\EntityFramework.dll
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\bin\Debug\EntityFramework.SqlServer.dll
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\bin\Debug\EntityFramework.xml
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\bin\Debug\EntityFramework.SqlServer.xml
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.csproj.AssemblyReference.cache
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.csproj.SuggestedBindingRedirects.cache
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.FormCompose.resources
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.FormLogin.resources
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.Properties.Resources.resources
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.csproj.GenerateResource.cache
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.csproj.CoreCompileInputs.cache
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.csproj.CopyComplete
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.exe
+D:\UEH\ST001_K46\HK5\ANNINHTHONGTIN\DOANCUOIKY\baomatthudientu\baomatthudientu\obj\Debug\baomatthudientu.pdb
