@@ -25,7 +25,6 @@ namespace baomatthudientu
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Mail> Mails { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }

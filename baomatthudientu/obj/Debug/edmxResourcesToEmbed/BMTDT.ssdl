@@ -1,15 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="BAOMATTHUDIENTUModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'BAOMATTHUDIENTU.dbo.Mail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Mail">
     <Key>
       <PropertyRef Name="Id" />
-      <PropertyRef Name="Context" />
-      <PropertyRef Name="Sender" />
-      <PropertyRef Name="Receiver" />
-      <PropertyRef Name="Time" />
-      <PropertyRef Name="State" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="Subject" Type="nvarchar" MaxLength="50" />
@@ -18,16 +11,6 @@ warning 6002: The table/view 'BAOMATTHUDIENTU.dbo.Mail' does not have a primary 
     <Property Name="Receiver" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Time" Type="datetime" Nullable="false" />
     <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'BAOMATTHUDIENTU.dbo.User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -44,18 +27,7 @@ warning 6002: The table/view 'BAOMATTHUDIENTU.dbo.User' does not have a primary 
     <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityContainer Name="BAOMATTHUDIENTUModelStoreContainer">
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Mail" EntityType="Self.Mail" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Mail].[Id] AS [Id], 
-    [Mail].[Subject] AS [Subject], 
-    [Mail].[Context] AS [Context], 
-    [Mail].[Sender] AS [Sender], 
-    [Mail].[Receiver] AS [Receiver], 
-    [Mail].[Time] AS [Time], 
-    [Mail].[State] AS [State]
-    FROM [dbo].[Mail] AS [Mail]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="Mail" EntityType="Self.Mail" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [User].[Id] AS [Id], 

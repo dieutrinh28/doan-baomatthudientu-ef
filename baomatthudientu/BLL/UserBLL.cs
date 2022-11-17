@@ -14,5 +14,9 @@ namespace baomatthudientu.BLL
         {
             return UserDAL.GetAll();
         }
+        public static UserDTO getUser(string username)
+        {
+            return UserDAL.getUser(username);
+        }
     }
 }
