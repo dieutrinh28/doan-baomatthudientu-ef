@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using baomatthudientu.BLL;
 
 namespace baomatthudientu
 {
@@ -21,7 +20,7 @@ namespace baomatthudientu
         }
         public bool Login()
         {
-            List<UserDTO> listUser = UserBLL.GetAll();
+            List<UserDTO> listUser = UserBLL.getAll();
             int count = 0;
             for(int i = 0; i < listUser.Count; i++)
             {

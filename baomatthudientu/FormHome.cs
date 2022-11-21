@@ -44,5 +44,10 @@ namespace baomatthudientu
             FormSelectAddress form = new FormSelectAddress();
             form.Show();
         }
+
+        private void lblXemThu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

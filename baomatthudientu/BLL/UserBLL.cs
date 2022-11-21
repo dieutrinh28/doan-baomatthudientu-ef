@@ -10,9 +10,9 @@ namespace baomatthudientu.BLL
 {
     internal class UserBLL
     {
-        public static List<UserDTO> GetAll()
+        public static List<UserDTO> getAll()
         {
-            return UserDAL.GetAll();
+            return UserDAL.getAll();
         }
         public static UserDTO getUser(string username)
         {

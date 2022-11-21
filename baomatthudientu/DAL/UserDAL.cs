@@ -10,7 +10,7 @@ namespace baomatthudientu.DAL
 {
     internal class UserDAL
     {
-        public static List<UserDTO> GetAll()
+        public static List<UserDTO> getAll()
         {
             BAOMATTHUDIENTUEntities data = new BAOMATTHUDIENTUEntities();
             var truyvan = from user in data.Users

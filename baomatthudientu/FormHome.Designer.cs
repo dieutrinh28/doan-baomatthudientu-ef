@@ -30,17 +30,17 @@ namespace baomatthudientu
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Thư nhận về");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Thư gửi đi");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Thư đã gửi");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Thư đã xóa");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Thư đang soạn");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Thư điện tử", new System.Windows.Forms.TreeNode[] {
-            treeNode25,
-            treeNode26,
-            treeNode27,
-            treeNode28,
-            treeNode29});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Thư nhận về");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Thư gửi đi");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Thư đã gửi");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Thư đã xóa");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Thư đang soạn");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Thư điện tử", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hiểnThịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +62,7 @@ namespace baomatthudientu
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.linklblAddress = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.lblXemThu = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linklblCompose = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -227,20 +227,20 @@ namespace baomatthudientu
             this.treeView1.Location = new System.Drawing.Point(6, 27);
             this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeView1.Name = "treeView1";
-            treeNode25.Name = "Node1";
-            treeNode25.Text = "Thư nhận về";
-            treeNode26.Name = "Node2";
-            treeNode26.Text = "Thư gửi đi";
-            treeNode27.Name = "Node3";
-            treeNode27.Text = "Thư đã gửi";
-            treeNode28.Name = "Node4";
-            treeNode28.Text = "Thư đã xóa";
-            treeNode29.Name = "Node5";
-            treeNode29.Text = "Thư đang soạn";
-            treeNode30.Name = "Node0";
-            treeNode30.Text = "Thư điện tử";
+            treeNode1.Name = "Node1";
+            treeNode1.Text = "Thư nhận về";
+            treeNode2.Name = "Node2";
+            treeNode2.Text = "Thư gửi đi";
+            treeNode3.Name = "Node3";
+            treeNode3.Text = "Thư đã gửi";
+            treeNode4.Name = "Node4";
+            treeNode4.Text = "Thư đã xóa";
+            treeNode5.Name = "Node5";
+            treeNode5.Text = "Thư đang soạn";
+            treeNode6.Name = "Node0";
+            treeNode6.Text = "Thư điện tử";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode30});
+            treeNode6});
             this.treeView1.Size = new System.Drawing.Size(219, 278);
             this.treeView1.TabIndex = 3;
             // 
@@ -272,7 +272,7 @@ namespace baomatthudientu
             // 
             this.groupBox3.Controls.Add(this.linkLabel6);
             this.groupBox3.Controls.Add(this.linklblAddress);
-            this.groupBox3.Controls.Add(this.linkLabel4);
+            this.groupBox3.Controls.Add(this.lblXemThu);
             this.groupBox3.Controls.Add(this.linkLabel3);
             this.groupBox3.Controls.Add(this.linklblCompose);
             this.groupBox3.Controls.Add(this.linkLabel1);
@@ -312,16 +312,17 @@ namespace baomatthudientu
             this.linklblAddress.Text = "Mở danh sách các địa chỉ";
             this.linklblAddress.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblAddress_LinkClicked);
             // 
-            // linkLabel4
+            // lblXemThu
             // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel4.Location = new System.Drawing.Point(67, 149);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(60, 16);
-            this.linkLabel4.TabIndex = 13;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Xem Thư";
+            this.lblXemThu.AutoSize = true;
+            this.lblXemThu.LinkColor = System.Drawing.Color.Black;
+            this.lblXemThu.Location = new System.Drawing.Point(67, 149);
+            this.lblXemThu.Name = "lblXemThu";
+            this.lblXemThu.Size = new System.Drawing.Size(60, 16);
+            this.lblXemThu.TabIndex = 13;
+            this.lblXemThu.TabStop = true;
+            this.lblXemThu.Text = "Xem Thư";
+            this.lblXemThu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblXemThu_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -467,7 +468,7 @@ namespace baomatthudientu
         private Label label6;
         private LinkLabel linkLabel6;
         private LinkLabel linklblAddress;
-        private LinkLabel linkLabel4;
+        private LinkLabel lblXemThu;
         private LinkLabel linkLabel3;
         private Button button8;
     }
