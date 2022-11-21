@@ -10,7 +10,8 @@
     <Property Name="Sender" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Receiver" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Time" Type="datetime" Nullable="false" />
-    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Delete" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="User">
     <Key>

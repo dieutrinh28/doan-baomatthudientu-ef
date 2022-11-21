@@ -52,7 +52,7 @@ namespace baomatthudientu
             Helper.PopChar(ref SpecialChar, ref IndexUpper, ref split);
             for (int m = 0; m < split.Length; m++)
             {
-                de += Vigenere.Decipher(split[m], (string)Helper.key) + " ";
+                de += Vigenere.Decipher(split[m], "lemon") + " ";
             }
 
             string result = "";

@@ -15,7 +15,11 @@ namespace baomatthudientu
         public FormHome()
         {
             InitializeComponent();
-            //nhớ xóa
+            lbXemThu.Click += LbXemThu_Click;
+        }
+
+        private void LbXemThu_Click(object sender, EventArgs e)
+        {
             FormReadMail form = new FormReadMail();
             form.Show();
         }

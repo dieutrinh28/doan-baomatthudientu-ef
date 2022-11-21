@@ -14,7 +14,8 @@
     <Property Name="Sender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Receiver" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delete" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="User">
     <Key>
