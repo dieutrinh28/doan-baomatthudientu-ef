@@ -15,6 +15,13 @@ namespace baomatthudientu
         public FormHome()
         {
             InitializeComponent();
+            lbXemThu.Click += LbXemThu_Click;
+        }
+
+        private void LbXemThu_Click(object sender, EventArgs e)
+        {
+            FormReadMail form = new FormReadMail();
+            form.Show();
         }
 
         private void btnCompose_Click(object sender, EventArgs e)
@@ -45,9 +52,20 @@ namespace baomatthudientu
             form.Show();
         }
 
-        private void lblXemThu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        /*private void CloseAllForm()
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                FormLogin form = new FormLogin();
+                form.Show();
+                frm.Close();
+            }
+        }*/
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
+
     }
 }

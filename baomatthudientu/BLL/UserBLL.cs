@@ -14,9 +14,9 @@ namespace baomatthudientu.BLL
         {
             return UserDAL.getAll();
         }
-        public static UserDTO getUser(string username)
+        public static string getEmail(string username)
         {
-            return UserDAL.getUser(username);
+            return UserDAL.getEmail(username);
         }
     }
 }

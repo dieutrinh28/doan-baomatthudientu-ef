@@ -13,7 +13,7 @@ namespace baomatthudientu.DAL
         {
             BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
 
-            MailDTO mail = new MailDTO(db.Mails.Count()+1, sub, context, sender, receiver, time, "1");
+            MailDTO mail = new MailDTO(db.Mails.Count()+1, sub, context, sender, receiver, time, "chưa đọc");
             Mail m = new Mail()
             {
                 Id = mail.Id,
@@ -22,7 +22,7 @@ namespace baomatthudientu.DAL
                 Sender = mail.Sender,
                 Receiver = mail.Receiver,
                 Time = mail.Time,
-                State = mail.State
+                Status = mail.Status
             };
             db.Mails.Add(m);
             db.SaveChanges();
@@ -35,10 +35,18 @@ namespace baomatthudientu.DAL
             var v = from c in db.Mails where c.Receiver == email select c;
             foreach(Mail item in v)
             {
-                MailDTO dto = new MailDTO(item.Id, item.Subject, item.Context, item.Sender, item.Receiver, item.Time, item.State);
+                MailDTO dto = new MailDTO(item.Id, item.Subject, item.Context, item.Sender, item.Receiver, item.Time, item.Status);
                 result.Add(dto);
             }
             return result;
+        }
+        public static bool changeStatus(int id)
+        {
+            BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
+            Mail mail = db.Mails.Find(id);
+            mail.Status = "Đã đọc";
+            db.SaveChanges();
+            return true;
         }
     }
 }

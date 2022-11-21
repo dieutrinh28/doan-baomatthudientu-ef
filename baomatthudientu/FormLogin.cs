@@ -45,10 +45,11 @@ namespace baomatthudientu
         {
             if(Login())
             {
-                Helper.user = UserBLL.getUser(txtUsername.Text);
-                this.Hide();
+                Helper.emailUser = UserBLL.getEmail(txtUsername.Text);
+                
                 FormHome form = new FormHome();
                 form.Show();
+                this.Hide();
             }
             else
             {

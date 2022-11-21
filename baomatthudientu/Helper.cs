@@ -9,8 +9,8 @@ namespace baomatthudientu
 {
     internal class Helper
     {
-        public static UserDTO user { get; set; } 
-        public static string key { get; set; }
+        public static string emailUser { get; set; }
+        public static object key { get; set; }
         public static void PopChar(ref List<SpecialCharacter> SpecialChar, ref List<UpperCharacter> IndexUpper, ref string[] split)
         {
             for (int m = 0; m < split.Length; m++)

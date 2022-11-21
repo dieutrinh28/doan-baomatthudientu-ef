@@ -53,29 +53,29 @@ namespace baomatthudientu
             // 
             // txtTimeNow
             // 
-            this.txtTimeNow.Location = new System.Drawing.Point(496, 183);
-            this.txtTimeNow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimeNow.Location = new System.Drawing.Point(372, 149);
+            this.txtTimeNow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTimeNow.Name = "txtTimeNow";
             this.txtTimeNow.ReadOnly = true;
-            this.txtTimeNow.Size = new System.Drawing.Size(156, 22);
+            this.txtTimeNow.Size = new System.Drawing.Size(118, 20);
             this.txtTimeNow.TabIndex = 15;
             // 
             // txtDayNow
             // 
-            this.txtDayNow.Location = new System.Drawing.Point(318, 183);
-            this.txtDayNow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDayNow.Location = new System.Drawing.Point(238, 149);
+            this.txtDayNow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDayNow.Name = "txtDayNow";
             this.txtDayNow.ReadOnly = true;
-            this.txtDayNow.Size = new System.Drawing.Size(172, 22);
+            this.txtDayNow.Size = new System.Drawing.Size(130, 20);
             this.txtDayNow.TabIndex = 14;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(1, 183);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Location = new System.Drawing.Point(1, 149);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(311, 22);
+            this.textBox3.Size = new System.Drawing.Size(234, 20);
             this.textBox3.TabIndex = 13;
             // 
             // groupBox1
@@ -86,37 +86,38 @@ namespace baomatthudientu
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Controls.Add(this.txtPassword);
-            this.groupBox1.Location = new System.Drawing.Point(10, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(8, 3);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(631, 137);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(473, 111);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(197, 34);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Location = new System.Drawing.Point(148, 28);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(196, 22);
+            this.txtUsername.Size = new System.Drawing.Size(148, 20);
             this.txtUsername.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 35);
+            this.label1.Location = new System.Drawing.Point(26, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 16);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập";
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(462, 79);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Location = new System.Drawing.Point(346, 64);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(94, 28);
+            this.btnReset.Size = new System.Drawing.Size(70, 23);
             this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Xóa";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -125,18 +126,19 @@ namespace baomatthudientu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 86);
+            this.label2.Location = new System.Drawing.Point(26, 70);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật khẩu";
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(462, 26);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Location = new System.Drawing.Point(346, 21);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(94, 30);
+            this.btnLogin.Size = new System.Drawing.Size(70, 24);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -144,18 +146,19 @@ namespace baomatthudientu
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(197, 85);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(148, 69);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(196, 22);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(148, 20);
             this.txtPassword.TabIndex = 3;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(10, 153);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Location = new System.Drawing.Point(8, 124);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(94, 26);
+            this.btnExit.Size = new System.Drawing.Size(70, 21);
             this.btnExit.TabIndex = 11;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -163,15 +166,15 @@ namespace baomatthudientu
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 212);
+            this.ClientSize = new System.Drawing.Size(491, 172);
             this.Controls.Add(this.txtTimeNow);
             this.Controls.Add(this.txtDayNow);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExit);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormLogin";
             this.Text = "Đăng nhập hệ thống";
             this.groupBox1.ResumeLayout(false);

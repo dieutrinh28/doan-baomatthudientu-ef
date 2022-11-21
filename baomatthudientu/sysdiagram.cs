@@ -12,15 +12,12 @@ namespace baomatthudientu
     using System;
     using System.Collections.Generic;
     
-    public partial class Mail
+    public partial class sysdiagram
     {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Context { get; set; }
-        public string Sender { get; set; }
-        public string Receiver { get; set; }
-        public System.DateTime Time { get; set; }
-        public string Status { get; set; }
-        public int Delete { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -49,7 +49,7 @@ namespace baomatthudientu
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnAddress = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@ namespace baomatthudientu
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.linklblAddress = new System.Windows.Forms.LinkLabel();
-            this.lblXemThu = new System.Windows.Forms.LinkLabel();
+            this.lbXemThu = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linklblCompose = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -88,6 +88,7 @@ namespace baomatthudientu
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -125,7 +126,7 @@ namespace baomatthudientu
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.btnLogout);
             this.groupBox1.Controls.Add(this.btnAddress);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button4);
@@ -142,7 +143,7 @@ namespace baomatthudientu
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(290, 8);
+            this.button8.Location = new System.Drawing.Point(291, 7);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(81, 33);
@@ -150,22 +151,23 @@ namespace baomatthudientu
             this.button8.Text = "In thư";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnLogout
             // 
-            this.button7.Location = new System.Drawing.Point(655, 8);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(81, 33);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Tìm kiếm";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnLogout.Location = new System.Drawing.Point(695, 7);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(105, 33);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAddress
             // 
-            this.btnAddress.Location = new System.Drawing.Point(551, 8);
+            this.btnAddress.Location = new System.Drawing.Point(551, 7);
             this.btnAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddress.Name = "btnAddress";
-            this.btnAddress.Size = new System.Drawing.Size(98, 33);
+            this.btnAddress.Size = new System.Drawing.Size(99, 33);
             this.btnAddress.TabIndex = 5;
             this.btnAddress.Text = "Sổ địa chỉ";
             this.btnAddress.UseVisualStyleBackColor = true;
@@ -173,7 +175,7 @@ namespace baomatthudientu
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(464, 8);
+            this.button5.Location = new System.Drawing.Point(464, 7);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(81, 33);
@@ -183,7 +185,7 @@ namespace baomatthudientu
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(377, 8);
+            this.button4.Location = new System.Drawing.Point(377, 7);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(81, 33);
@@ -193,7 +195,7 @@ namespace baomatthudientu
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(200, 8);
+            this.button3.Location = new System.Drawing.Point(200, 7);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 33);
@@ -203,7 +205,7 @@ namespace baomatthudientu
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(127, 8);
+            this.button2.Location = new System.Drawing.Point(127, 7);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(67, 33);
@@ -213,7 +215,7 @@ namespace baomatthudientu
             // 
             // btnCompose
             // 
-            this.btnCompose.Location = new System.Drawing.Point(0, 8);
+            this.btnCompose.Location = new System.Drawing.Point(0, 7);
             this.btnCompose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCompose.Name = "btnCompose";
             this.btnCompose.Size = new System.Drawing.Size(121, 33);
@@ -224,7 +226,7 @@ namespace baomatthudientu
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(6, 27);
+            this.treeView1.Location = new System.Drawing.Point(5, 27);
             this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Node1";
@@ -241,7 +243,7 @@ namespace baomatthudientu
             treeNode6.Text = "Thư điện tử";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode6});
-            this.treeView1.Size = new System.Drawing.Size(219, 278);
+            this.treeView1.Size = new System.Drawing.Size(291, 341);
             this.treeView1.TabIndex = 3;
             // 
             // label1
@@ -272,7 +274,7 @@ namespace baomatthudientu
             // 
             this.groupBox3.Controls.Add(this.linkLabel6);
             this.groupBox3.Controls.Add(this.linklblAddress);
-            this.groupBox3.Controls.Add(this.lblXemThu);
+            this.groupBox3.Controls.Add(this.lbXemThu);
             this.groupBox3.Controls.Add(this.linkLabel3);
             this.groupBox3.Controls.Add(this.linklblCompose);
             this.groupBox3.Controls.Add(this.linkLabel1);
@@ -293,7 +295,7 @@ namespace baomatthudientu
             // 
             this.linkLabel6.AutoSize = true;
             this.linkLabel6.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel6.Location = new System.Drawing.Point(67, 275);
+            this.linkLabel6.Location = new System.Drawing.Point(67, 274);
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.Size = new System.Drawing.Size(160, 16);
             this.linkLabel6.TabIndex = 15;
@@ -312,23 +314,23 @@ namespace baomatthudientu
             this.linklblAddress.Text = "Mở danh sách các địa chỉ";
             this.linklblAddress.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblAddress_LinkClicked);
             // 
-            // lblXemThu
+            // lbXemThu
             // 
-            this.lblXemThu.AutoSize = true;
-            this.lblXemThu.LinkColor = System.Drawing.Color.Black;
-            this.lblXemThu.Location = new System.Drawing.Point(67, 149);
-            this.lblXemThu.Name = "lblXemThu";
-            this.lblXemThu.Size = new System.Drawing.Size(60, 16);
-            this.lblXemThu.TabIndex = 13;
-            this.lblXemThu.TabStop = true;
-            this.lblXemThu.Text = "Xem Thư";
-            this.lblXemThu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblXemThu_LinkClicked);
+            this.lbXemThu.AutoSize = true;
+            this.lbXemThu.LinkColor = System.Drawing.Color.Black;
+            this.lbXemThu.Location = new System.Drawing.Point(72, 149);
+            this.lbXemThu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbXemThu.Name = "lbXemThu";
+            this.lbXemThu.Size = new System.Drawing.Size(60, 16);
+            this.lbXemThu.TabIndex = 13;
+            this.lbXemThu.TabStop = true;
+            this.lbXemThu.Text = "Xem Thư";
             // 
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(67, 173);
+            this.linkLabel3.Location = new System.Drawing.Point(67, 174);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(82, 16);
             this.linkLabel3.TabIndex = 12;
@@ -448,7 +450,7 @@ namespace baomatthudientu
         private ToolStripMenuItem cấuHìnhToolStripMenuItem;
         private ToolStripMenuItem trợGiúpToolStripMenuItem;
         private GroupBox groupBox1;
-        private Button button7;
+        private Button btnLogout;
         private Button btnAddress;
         private Button button5;
         private Button button4;
@@ -468,7 +470,7 @@ namespace baomatthudientu
         private Label label6;
         private LinkLabel linkLabel6;
         private LinkLabel linklblAddress;
-        private LinkLabel lblXemThu;
+        private LinkLabel lbXemThu;
         private LinkLabel linkLabel3;
         private Button button8;
     }

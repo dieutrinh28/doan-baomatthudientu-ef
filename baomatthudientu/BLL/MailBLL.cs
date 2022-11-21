@@ -18,5 +18,9 @@ namespace baomatthudientu.BLL
         {
             return MailDAL.getMail(email);
         }
+        public static bool changeStatus(int id)
+        {
+            return MailDAL.changeStatus(id);
+        }
     }
 }

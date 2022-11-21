@@ -6,7 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="254caf621efe49c6aa8323c271a5c3dd" Name="Diagram1">
         <EntityTypeShape EntityType="BAOMATTHUDIENTUModel.Mail" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BAOMATTHUDIENTUModel.User" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BAOMATTHUDIENTUModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BAOMATTHUDIENTUModel.User" Width="1.5" PointX="2.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
