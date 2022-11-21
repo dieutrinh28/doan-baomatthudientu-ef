@@ -124,6 +124,7 @@
     <Compile Include="User.cs">
       <DependentUpon>BMTDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="Vigenere.cs" />
     <EmbeddedResource Include="FormCompose.resx">
       <DependentUpon>FormCompose.cs</DependentUpon>
     </EmbeddedResource>

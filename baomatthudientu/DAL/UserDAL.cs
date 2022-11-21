@@ -29,11 +29,11 @@ namespace baomatthudientu.DAL
             }
             return listUser;
         }
-        public static UserDTO getUser(string username)
+        public static string getEmail(string username)
         {
             BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
-            var v = (from c in db.Users where c.Username == username select c).SingleOrDefault();
-            return new UserDTO(v.Id, v.Username, v.Password, v.Email);
+            var v = (from c in db.Users where c.Username == username select c.Email).SingleOrDefault();
+            return v;
         }
     }
 }

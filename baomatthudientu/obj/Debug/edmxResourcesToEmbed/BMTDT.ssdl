@@ -10,16 +10,11 @@
     <Property Name="Sender" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Receiver" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Time" Type="datetime" Nullable="false" />
-    <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'BAOMATTHUDIENTU.dbo.User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="Id" />
-      <PropertyRef Name="Username" />
-      <PropertyRef Name="Password" />
-      <PropertyRef Name="Email" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -28,13 +23,6 @@ warning 6002: The table/view 'BAOMATTHUDIENTU.dbo.User' does not have a primary 
   </EntityType>
   <EntityContainer Name="BAOMATTHUDIENTUModelStoreContainer">
     <EntitySet Name="Mail" EntityType="Self.Mail" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="User" EntityType="Self.User" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [User].[Id] AS [Id], 
-    [User].[Username] AS [Username], 
-    [User].[Password] AS [Password], 
-    [User].[Email] AS [Email]
-    FROM [dbo].[User] AS [User]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

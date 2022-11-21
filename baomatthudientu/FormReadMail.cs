@@ -14,7 +14,7 @@ namespace baomatthudientu
 {
     public partial class FormReadMail : Form
     {
-        string email = "1@gmail.com";
+        string email = Helper.emailUser;
         public FormReadMail()
         {
             InitializeComponent();
@@ -24,18 +24,27 @@ namespace baomatthudientu
 
         private void FormReadMail_Load(object sender, EventArgs e)
         {
-            dgv.DataSource = (from p in MailBLL.getMail(email) select new { TrangThai = "chưa đọc", ChuDe = p.Subject, NguoiGui = p.Sender, NgayGui = p.Time }).ToList();
+            setDatasource();
             //------------------------------------------------------------//
 
         }
-
+        private void setDatasource()
+        {
+            dgv.DataSource = null;
+            dgv.DataSource = (from p in MailBLL.getMail(email) select new { id = p.Id, TrangThai = p.Status, ChuDe = p.Subject, NguoiGui = p.Sender, NgayGui = p.Time }).ToList();
+            this.dgv.Columns[0].Visible = false;
+        }
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             List<SpecialCharacter> SpecialChar = new List<SpecialCharacter>();
             List<UpperCharacter> IndexUpper = new List<UpperCharacter>();
             List<MailDTO> list = MailBLL.getMail(email);
             MailDTO Mail = list[e.RowIndex];
-            dgv.Rows[e.RowIndex].Cells[0].Value = "Đã đọc";
+            MailBLL.changeStatus((int)dgv.Rows[e.RowIndex].Cells[0].Value);
+            setDatasource();
+            
+            dgv.Rows[e.RowIndex].Selected = true;
+            this.dgv.Columns[0].Visible = false;
             lbSender.Text = Mail.Sender;
             lbSubject.Text = Mail.Subject;
             string[] split = Mail.Context.TrimEnd().TrimStart().Split();
@@ -43,48 +52,14 @@ namespace baomatthudientu
             Helper.PopChar(ref SpecialChar, ref IndexUpper, ref split);
             for (int m = 0; m < split.Length; m++)
             {
-                de += RailFence.Decipher(split[m], 2) + " ";
+                de += Vigenere.Decipher(split[m], (string)Helper.key) + " ";
             }
 
             string result = "";
             string[] split2 = de.Split();
             Helper.PushChar(SpecialChar, IndexUpper, split2, ref result);
             txbMail.Text = result;
-            /*EnMail Mail = Save.ListEnMail[e.RowIndex];
-            dgv.Rows[e.RowIndex].Cells[0].Value = "Đã đọc";
-            lbSender.Text = Mail.sender;
-            lbSubject.Text = Mail.subject;
-            string[] split = Mail.text.TrimEnd().TrimStart().Split(" ");
-            string de = "";
-            for (int m = 0; m < split.Length; m++)
-            {
-                de += PlayFair.Decipher(split[m], "key") + " ";
-            }
-
-            string result = "";
-            string[] split2 = de.Split(" ");
-            for (int i = 0; i < split2.Length; i++)
-            {
-                string s = split2[i];
-                // Viết hoa các kí tự
-                foreach (UpperCharacter item in Mail.IndexUpper)
-                {
-                    if (item.indexString == i)
-                    {
-                        s = s.Replace(s[item.indexUpper], char.ToUpper(s[item.indexUpper]));
-                    }
-                }
-                //Thêm các kí tự khác
-                foreach (SpecialCharacter item in Mail.SpecialChar)
-                {
-                    if (item.indexString == i)
-                    {
-                        s = s.Insert(item.indexInsert, item.c.ToString());
-                    }
-                }
-                result += s + " ";
-            }
-            txbMail.Text = result;*/
+            
         }
     }
 }

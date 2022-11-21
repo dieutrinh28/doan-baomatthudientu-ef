@@ -17,19 +17,21 @@ namespace baomatthudientu
         {
             InitializeComponent();
             btnSendMail.Click += BtnSendMail_Click;
+            txbFrom.Text = Helper.emailUser;
+            txbFrom.Enabled = false;
+            Helper.key = "lemon";
         }
 
         private void BtnSendMail_Click(object sender, EventArgs e)
         {
             List<SpecialCharacter> SpecialChar = new List<SpecialCharacter>();
             List<UpperCharacter> IndexUpper = new List<UpperCharacter>();
-            int key = 2;
             string[] split = txbMail.Text.TrimEnd().TrimStart().Split();
             string EnText = "";
             Helper.PopChar(ref SpecialChar, ref IndexUpper, ref split);
             foreach (string s in split)
             {
-                string en = RailFence.Encipher(s, key);
+                string en = Vigenere.Encipher(s, (string)Helper.key);
                 EnText += en + " ";
             }
             split = EnText.TrimEnd().TrimStart().Split();

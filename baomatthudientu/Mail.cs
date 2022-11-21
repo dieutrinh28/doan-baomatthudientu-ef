@@ -20,6 +20,6 @@ namespace baomatthudientu
         public string Sender { get; set; }
         public string Receiver { get; set; }
         public System.DateTime Time { get; set; }
-        public string State { get; set; }
+        public string status { get; set; }
     }
 }

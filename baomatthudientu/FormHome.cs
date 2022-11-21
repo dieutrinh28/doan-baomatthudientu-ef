@@ -15,6 +15,9 @@ namespace baomatthudientu
         public FormHome()
         {
             InitializeComponent();
+            //nhớ xóa
+            FormReadMail form = new FormReadMail();
+            form.Show();
         }
 
         private void btnCompose_Click(object sender, EventArgs e)

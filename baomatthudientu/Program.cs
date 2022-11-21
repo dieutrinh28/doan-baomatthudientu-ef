@@ -16,7 +16,7 @@ namespace baomatthudientu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormCompose());
+            Application.Run(new FormLogin());
         }
     }
 }

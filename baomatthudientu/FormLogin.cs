@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using baomatthudientu.BLL;
 
 namespace baomatthudientu
 {
@@ -46,10 +45,11 @@ namespace baomatthudientu
         {
             if(Login())
             {
-                Helper.user = UserBLL.getUser(txtUsername.Text);
-                this.Hide();
+                Helper.emailUser = UserBLL.getEmail(txtUsername.Text);
+                
                 FormHome form = new FormHome();
                 form.Show();
+                this.Hide();
             }
             else
             {
