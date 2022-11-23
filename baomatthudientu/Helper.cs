@@ -7,6 +7,28 @@ using baomatthudientu.DTO;
 
 namespace baomatthudientu
 {
+    class SpecialCharacter
+    {
+        public char c { get; set; }
+        public int indexString { get; set; }
+        public int indexInsert { get; set; }
+        public SpecialCharacter(char c, int indexString, int indexInsert)
+        {
+            this.c = c;
+            this.indexString = indexString;
+            this.indexInsert = indexInsert;
+        }
+    }
+    class UpperCharacter
+    {
+        public int indexString { get; set; }
+        public int indexUpper { get; set; }
+        public UpperCharacter(int indexString, int indexUpper)
+        {
+            this.indexUpper = indexUpper;
+            this.indexString = indexString;
+        }
+    }
     internal class Helper
     {
         public static string emailUser { get; set; }
@@ -59,15 +81,18 @@ namespace baomatthudientu
         {
             for (int i = 0; i < split.Length; i++)
             {
-                
+
                 string s = split[i];
-                
+
                 // Viết hoa các kí tự
                 foreach (UpperCharacter item in IndexUpper)
                 {
                     if (item.indexString == i)
                     {
-                        s = s.Replace(s[item.indexUpper], char.ToUpper(s[item.indexUpper]));
+                        //s = s.Replace(s[item.indexUpper], char.ToUpper(s[item.indexUpper]));
+                        s = s.Insert(item.indexUpper, s[item.indexUpper].ToString().ToUpper());
+                        s = s.Remove(item.indexUpper + 1, 1);
+                        // = s.Insert(item.indexUpper, s[item.indexUpper].ToString().ToUpper());
                     }
                 }
                 //Thêm các kí tự khác

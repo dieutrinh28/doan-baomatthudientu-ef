@@ -16,6 +16,7 @@ namespace baomatthudientu
         {
             InitializeComponent();
             lbXemThu.Click += LbXemThu_Click;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void LbXemThu_Click(object sender, EventArgs e)

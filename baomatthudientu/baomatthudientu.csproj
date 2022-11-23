@@ -76,7 +76,6 @@
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DTO\MailDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
-    <Compile Include="EnMail.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +117,7 @@
       <DependentUpon>BMTDT.tt</DependentUpon>
     </Compile>
     <Compile Include="MonoAlphabeticCipher.cs" />
+    <Compile Include="OneTimePad.cs" />
     <Compile Include="PlayFair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

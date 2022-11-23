@@ -17,6 +17,7 @@ namespace baomatthudientu
         public FormLogin()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         public bool Login()
         {

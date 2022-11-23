@@ -18,7 +18,7 @@ namespace baomatthudientu
         {
             InitializeComponent();
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         private void LoadForm()
         {
@@ -51,8 +51,6 @@ namespace baomatthudientu
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             txtTo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

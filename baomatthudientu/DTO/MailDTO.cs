@@ -15,7 +15,9 @@ namespace baomatthudientu.DTO
         public string Receiver { get; set; }
         public DateTime Time { get; set; }
         public string Status { get; set; }
-        public MailDTO(int Id, string Subject, string Context, string Sender, string Receiver, DateTime Time, string Status)
+        public int Delete { get; set; }
+        public int NumEn { get; set; }
+        public MailDTO(int Id, string Subject, string Context, string Sender, string Receiver, DateTime Time, string Status, int Delete, int NumEn)
         {
             this.Id = Id;
             this.Subject = Subject;
@@ -24,6 +26,8 @@ namespace baomatthudientu.DTO
             this.Receiver = Receiver;
             this.Time = Time;
             this.Status = Status;
+            this.Delete = Delete;
+            this.NumEn = NumEn;
         }
         public MailDTO()
         {

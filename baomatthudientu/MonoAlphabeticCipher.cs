@@ -30,16 +30,19 @@ namespace baomatthudientu
         static string Decrypt(string cipherText, string key)
         {
             char[] chars = new char[cipherText.Length];
-            for (int i = 0; i < cipherText.Length; i++)
+            if(cipherText != "")
             {
-                if (cipherText[i] == ' ')
+                for (int i = 0; i < cipherText.Length; i++)
                 {
-                    chars[i] = ' ';
-                }
-                else
-                {
-                    int j = key.IndexOf(cipherText[i]) + 97;
-                    chars[i] = (char)j;
+                    if (cipherText[i] == ' ')
+                    {
+                        chars[i] = ' ';
+                    }
+                    else
+                    {
+                        int j = key.IndexOf(cipherText[i]) + 97;
+                        chars[i] = (char)j;
+                    }
                 }
             }
             return new string(chars);

@@ -22,5 +22,6 @@ namespace baomatthudientu
         public System.DateTime Time { get; set; }
         public string Status { get; set; }
         public int Delete { get; set; }
+        public Nullable<int> NumEn { get; set; }
     }
 }
