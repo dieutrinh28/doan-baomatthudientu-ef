@@ -28,13 +28,14 @@ namespace baomatthudientu.DAL
             db.SaveChanges();
             return true;
         }
-        public static List<MailDTO> getAll()
+        public static List<MailDTO> getAll(string email)
         {
             BAOMATTHUDIENTUEntities data = new BAOMATTHUDIENTUEntities();
             var truyvan = from mail in data.Mails
-                          select mail;
+                          where mail.Sender == email
+                          select mail ;
             List<MailDTO> listMail = new List<MailDTO>();
-
+            
 
             foreach (Mail mail in truyvan)
             {
@@ -56,6 +57,18 @@ namespace baomatthudientu.DAL
             List<MailDTO> result = new List<MailDTO>();
             var v = from c in db.Mails where c.Receiver == email select c;
             foreach(Mail item in v)
+            {
+                MailDTO dto = new MailDTO(item.Id, item.Subject, item.Context, item.Sender, item.Receiver, item.Time, item.Status);
+                result.Add(dto);
+            }
+            return result;
+        }
+        public static List<MailDTO> getDistinctMail(string email)
+        {
+            BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
+            List<MailDTO> result = new List<MailDTO>();
+            var v = from c in db.Mails where c.Sender == email select (c.Receiver).Distinct();
+            foreach (Mail item in v)
             {
                 MailDTO dto = new MailDTO(item.Id, item.Subject, item.Context, item.Sender, item.Receiver, item.Time, item.Status);
                 result.Add(dto);

@@ -20,11 +20,27 @@ namespace baomatthudientu
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
         }
+        public string email = String.Empty;
         private void LoadForm()
         {
-            List<MailDTO> mailList = MailBLL.getAll();
-            dataGridView1.DataSource = mailList;
+            List<MailDTO> mailList = MailBLL.getAll(Helper.emailUser);
+            List<string> list = new List<string>();
+            foreach(MailDTO mail in mailList)
+            {
+                list.Add(mail.Receiver.ToString());
+            }
+           // dataGridView1.DataSource = mailList;
 
+            var newlist = new HashSet<string>(list);// return a list without duplicate element.
+            List<string> list2 = new List<string>();
+            foreach(string item in newlist)
+            {
+                list2.Add(item);
+            }
+            var result = list2.Select(email => new { email }).ToList();
+            dataGridView1.DataSource = result;
+          
+            
         }
 
         private void FormSelectAddress_Load(object sender, EventArgs e)
@@ -50,7 +66,7 @@ namespace baomatthudientu
 
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            txtTo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+        txtTo.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
 
         }

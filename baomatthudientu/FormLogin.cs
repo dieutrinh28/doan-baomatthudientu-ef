@@ -18,6 +18,7 @@ namespace baomatthudientu
         {
             InitializeComponent();
         }
+
         public bool Login()
         {
             List<UserDTO> listUser = UserBLL.getAll();
@@ -27,6 +28,8 @@ namespace baomatthudientu
                 if(txtUsername.Text.Trim() == listUser[i].UserName.Trim() && txtPassword.Text.Trim() == listUser[i].Password.Trim())
                 {
                     count++;
+                    FormSelectAddress frmslad = new FormSelectAddress();
+                    frmslad.email = listUser[i].Email.ToString();
                     break;
                 }
                 

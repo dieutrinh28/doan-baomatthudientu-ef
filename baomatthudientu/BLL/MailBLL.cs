@@ -22,9 +22,13 @@ namespace baomatthudientu.BLL
         {
             return MailDAL.changeStatus(id);
         }
-        public static List<MailDTO> getAll()
+        public static List<MailDTO> getAll(string email)
         {
-            return MailDAL.getAll();
+            return MailDAL.getAll(email);
+        }
+        public static List<MailDTO> getDistinctMail(string email)
+        {
+            return MailDAL.getDistinctMail(email);
         }
     }
 }

@@ -49,17 +49,17 @@ namespace baomatthudientu
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 10;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(471, 171);
+            this.dataGridView1.Size = new System.Drawing.Size(482, 171);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(596, 108);
+            this.txtTo.Location = new System.Drawing.Point(583, 111);
             this.txtTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTo.Multiline = true;
             this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(183, 49);
+            this.txtTo.Size = new System.Drawing.Size(183, 84);
             this.txtTo.TabIndex = 1;
             // 
             // btnTo
