@@ -20,6 +20,7 @@ namespace baomatthudientu
             InitializeComponent();
             this.Load += FormReadMail_Load;
             dgv.CellClick += dgv_CellClick;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void FormReadMail_Load(object sender, EventArgs e)
@@ -36,13 +37,15 @@ namespace baomatthudientu
         }
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int id = (int)dgv.Rows[e.RowIndex].Cells[0].Value;
+            int rd = MailBLL.getNumEn(id);
             List<SpecialCharacter> SpecialChar = new List<SpecialCharacter>();
             List<UpperCharacter> IndexUpper = new List<UpperCharacter>();
             List<MailDTO> list = MailBLL.getMail(email);
             MailDTO Mail = list[e.RowIndex];
-            MailBLL.changeStatus((int)dgv.Rows[e.RowIndex].Cells[0].Value);
+            MailBLL.changeStatus(id);
             setDatasource();
-            
+
             dgv.Rows[e.RowIndex].Selected = true;
             this.dgv.Columns[0].Visible = false;
             lbSender.Text = Mail.Sender;
@@ -52,14 +55,32 @@ namespace baomatthudientu
             Helper.PopChar(ref SpecialChar, ref IndexUpper, ref split);
             for (int m = 0; m < split.Length; m++)
             {
-                de += Vigenere.Decipher(split[m], "lemon") + " ";
+                switch (rd)
+                {
+                    case 1: // Monoalphabetic
+                        //string en = Vigenere.Encipher(s, (string)Helper.key);
+                        //EnText += en + " ";
+                        break;
+                    case 2:
+                        de += OneTimePad.Decipher(split[m].ToLower(), OneTimePad.key("DIEUTRINHBICHNGANVANHANHOAINAMQUANGMINH".ToLower(), split[m].Length)) + " ";
+                        break;
+                    case 3:
+                        de += Vigenere.Decipher(split[m], "dieutrinh") + " ";
+                        break;
+                    case 4:
+                        de += RailFence.Decipher(split[m], 2) + " ";
+                        break;
+                    case 5:
+                        de += PlayFair.Decipher(split[m], "hoainam") + " ";
+                        break;
+                }
             }
 
             string result = "";
             string[] split2 = de.Split();
             Helper.PushChar(SpecialChar, IndexUpper, split2, ref result);
             txbMail.Text = result;
-            
+
         }
     }
 }

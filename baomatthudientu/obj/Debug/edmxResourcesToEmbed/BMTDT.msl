@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Mails">
       <EntityTypeMapping TypeName="BAOMATTHUDIENTUModel.Mail">
         <MappingFragment StoreEntitySet="Mail">
+          <ScalarProperty Name="NumEn" ColumnName="NumEn" />
           <ScalarProperty Name="Delete" ColumnName="Delete" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="Time" ColumnName="Time" />

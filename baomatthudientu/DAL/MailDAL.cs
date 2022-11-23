@@ -9,11 +9,11 @@ namespace baomatthudientu.DAL
 {
     internal class MailDAL
     {
-        public static bool addMail(string sub, string context, string sender, string receiver, DateTime time)
+        public static bool addMail(string sub, string context, string sender, string receiver, DateTime time, int numen)
         {
             BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
 
-            MailDTO mail = new MailDTO(db.Mails.Count()+1, sub, context, sender, receiver, time, "chưa đọc");
+            MailDTO mail = new MailDTO(db.Mails.Count() + 1, sub, context, sender, receiver, time, "chưa đọc", 1, numen);
             Mail m = new Mail()
             {
                 Id = mail.Id,
@@ -22,7 +22,9 @@ namespace baomatthudientu.DAL
                 Sender = mail.Sender,
                 Receiver = mail.Receiver,
                 Time = mail.Time,
-                Status = mail.Status
+                Status = mail.Status,
+                Delete = mail.Delete,
+                NumEn = mail.NumEn
             };
             db.Mails.Add(m);
             db.SaveChanges();
@@ -46,6 +48,9 @@ namespace baomatthudientu.DAL
                 dto.Subject = mail.Subject;
                 dto.Time = mail.Time;
                 dto.Context = mail.Context;
+                dto.Delete = mail.Delete;
+                dto.Status = mail.Status;
+                dto.NumEn = (int)mail.NumEn;
 
                 listMail.Add(dto);
             }
@@ -56,9 +61,9 @@ namespace baomatthudientu.DAL
             BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
             List<MailDTO> result = new List<MailDTO>();
             var v = from c in db.Mails where c.Receiver == email select c;
-            foreach(Mail item in v)
+            foreach (Mail item in v)
             {
-                MailDTO dto = new MailDTO(item.Id, item.Subject, item.Context, item.Sender, item.Receiver, item.Time, item.Status);
+                MailDTO dto = new MailDTO(item.Id, item.Subject, item.Context, item.Sender, item.Receiver, item.Time, item.Status, item.Delete, (int)item.NumEn);
                 result.Add(dto);
             }
             return result;
@@ -82,6 +87,12 @@ namespace baomatthudientu.DAL
             mail.Status = "Đã đọc";
             db.SaveChanges();
             return true;
+        }
+        public static int getNumEn(int id)
+        {
+            BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
+            var v = (from c in db.Mails where c.Id == id select c.NumEn).SingleOrDefault();
+            return (int)v;
         }
     }
 }

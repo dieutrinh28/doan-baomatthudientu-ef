@@ -17,6 +17,7 @@
           <Property Name="Time" Type="datetime" Nullable="false" />
           <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Delete" Type="int" Nullable="false" />
+          <Property Name="NumEn" Type="int" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -51,6 +52,7 @@
           <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Delete" Type="Int32" Nullable="false" />
+          <Property Name="NumEn" Type="Int32" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -70,6 +72,7 @@
           <EntitySetMapping Name="Mails">
             <EntityTypeMapping TypeName="BAOMATTHUDIENTUModel.Mail">
               <MappingFragment StoreEntitySet="Mail">
+                <ScalarProperty Name="NumEn" ColumnName="NumEn" />
                 <ScalarProperty Name="Delete" ColumnName="Delete" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Time" ColumnName="Time" />

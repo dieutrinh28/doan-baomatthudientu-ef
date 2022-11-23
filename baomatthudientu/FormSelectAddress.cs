@@ -18,7 +18,7 @@ namespace baomatthudientu
         {
             InitializeComponent();
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         public string email = String.Empty;
         private void LoadForm()
@@ -66,9 +66,13 @@ namespace baomatthudientu
 
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+<<<<<<< HEAD
         txtTo.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
 
+=======
+            txtTo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+>>>>>>> a1bf1896d1e252aab211f080361c556feaa0b55f
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

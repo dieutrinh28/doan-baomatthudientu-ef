@@ -10,9 +10,9 @@ namespace baomatthudientu.BLL
 {
     internal class MailBLL
     {
-        public static bool addMail(string sub, string context, string sender, string receiver, DateTime time)
+        public static bool addMail(string sub, string context, string sender, string receiver, DateTime time, int numen)
         {
-            return MailDAL.addMail(sub, context, sender, receiver, time);
+            return MailDAL.addMail(sub, context, sender, receiver, time, numen);
         }
         public static List<MailDTO> getMail(string email)
         {
@@ -29,6 +29,10 @@ namespace baomatthudientu.BLL
         public static List<MailDTO> getDistinctMail(string email)
         {
             return MailDAL.getDistinctMail(email);
+        }
+        public static int getNumEn(int id)
+        {
+            return MailDAL.getNumEn(id);
         }
     }
 }
