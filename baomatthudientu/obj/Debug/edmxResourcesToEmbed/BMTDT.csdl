@@ -2,7 +2,6 @@
 <Schema Namespace="BAOMATTHUDIENTUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="BAOMATTHUDIENTUEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Mails" EntityType="BAOMATTHUDIENTUModel.Mail" />
-    <EntitySet Name="sysdiagrams" EntityType="BAOMATTHUDIENTUModel.sysdiagram" />
     <EntitySet Name="Users" EntityType="BAOMATTHUDIENTUModel.User" />
   </EntityContainer>
   <EntityType Name="Mail">
@@ -17,16 +16,6 @@
     <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Delete" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="User">
     <Key>

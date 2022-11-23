@@ -117,13 +117,11 @@
     <Compile Include="Mail.cs">
       <DependentUpon>BMTDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="MonoAlphabeticCipher.cs" />
     <Compile Include="PlayFair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RailFence.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>BMTDT.tt</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>BMTDT.tt</DependentUpon>
     </Compile>
@@ -139,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReadMail.resx">
       <DependentUpon>FormReadMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectAddress.resx">
+      <DependentUpon>FormSelectAddress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -25,5 +25,16 @@ namespace baomatthudientu.DTO
             this.Time = Time;
             this.Status = Status;
         }
+        public MailDTO()
+        {
+            this.Id = 0;
+            this.Sender = "";
+            this.Receiver = "";
+            this.Status = "";
+            this.Time = DateTime.Now;
+            this.Context = "";
+            this.Subject = "";
+
+        }
     }
 }

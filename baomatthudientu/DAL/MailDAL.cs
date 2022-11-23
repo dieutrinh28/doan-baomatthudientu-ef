@@ -28,6 +28,28 @@ namespace baomatthudientu.DAL
             db.SaveChanges();
             return true;
         }
+        public static List<MailDTO> getAll()
+        {
+            BAOMATTHUDIENTUEntities data = new BAOMATTHUDIENTUEntities();
+            var truyvan = from mail in data.Mails
+                          select mail;
+            List<MailDTO> listMail = new List<MailDTO>();
+
+
+            foreach (Mail mail in truyvan)
+            {
+                MailDTO dto = new MailDTO();
+                dto.Id = mail.Id;
+                dto.Sender = mail.Sender;
+                dto.Receiver = mail.Receiver;
+                dto.Subject = mail.Subject;
+                dto.Time = mail.Time;
+                dto.Context = mail.Context;
+
+                listMail.Add(dto);
+            }
+            return listMail;
+        }
         public static List<MailDTO> getMail(string email)
         {
             BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();

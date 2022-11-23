@@ -13,6 +13,7 @@ namespace baomatthudientu
 {
     public partial class FormCompose : Form
     {
+        public string strValue = string.Empty;
         public FormCompose()
         {
             InitializeComponent();
@@ -21,7 +22,10 @@ namespace baomatthudientu
             txbFrom.Enabled = false;
             Helper.key = "lemon";
         }
-
+        private void LoadForm()
+        {
+            txbTo.Text = strValue;
+        }
         private void BtnSendMail_Click(object sender, EventArgs e)
         {
             List<SpecialCharacter> SpecialChar = new List<SpecialCharacter>();
@@ -53,6 +57,18 @@ namespace baomatthudientu
             //this.Hide();
             FormSelectAddress form = new FormSelectAddress();
             form.Show();
+        }
+
+        private void FormCompose_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadForm();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: "+ex);
+            }
         }
     }
 }
