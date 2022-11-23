@@ -21,6 +21,25 @@ namespace baomatthudientu
             this.Load += FormReadMail_Load;
             dgv.CellClick += dgv_CellClick;
             this.StartPosition = FormStartPosition.CenterScreen;
+            btnXoa.Click += BtnXoa_Click;
+            btnCompose.Click += BtnCompose_Click;
+        }
+
+        private void BtnCompose_Click(object sender, EventArgs e)
+        {
+            FormCompose frm = new FormCompose();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void BtnXoa_Click(object sender, EventArgs e)
+        {
+            if(dgv.SelectedRows.Count > 0)
+            {
+                int id = (int)dgv.SelectedRows[0].Cells[0].Value;
+                MailBLL.deleteMail(id);
+                setDatasource();
+            }
         }
 
         private void FormReadMail_Load(object sender, EventArgs e)
@@ -58,8 +77,7 @@ namespace baomatthudientu
                 switch (rd)
                 {
                     case 1: // Monoalphabetic
-                        //string en = Vigenere.Encipher(s, (string)Helper.key);
-                        //EnText += en + " ";
+                        de += MonoAlphabeticCipher.Decrypt(split[m].ToLower(), "dkvqfibjwpescxhtmyauolrgzn") +" ";
                         break;
                     case 2:
                         de += OneTimePad.Decipher(split[m].ToLower(), OneTimePad.key("DIEUTRINHBICHNGANVANHANHOAINAMQUANGMINH".ToLower(), split[m].Length)) + " ";

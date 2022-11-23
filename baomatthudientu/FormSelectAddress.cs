@@ -37,7 +37,7 @@ namespace baomatthudientu
             {
                 list2.Add(item);
             }
-            var result = list2.Select(email => new { email }).ToList();
+            var result = list2.Select(email => new { Email = email }).ToList();
             dataGridView1.DataSource = result;
           
             
@@ -66,13 +66,13 @@ namespace baomatthudientu
 
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-<<<<<<< HEAD
+
         txtTo.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
 
-=======
-            txtTo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
->>>>>>> a1bf1896d1e252aab211f080361c556feaa0b55f
+
+            //txtTo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

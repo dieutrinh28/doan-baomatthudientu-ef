@@ -21,11 +21,10 @@ namespace baomatthudientu
             txbFrom.Text = Helper.emailUser;
             txbFrom.Enabled = false;
             this.StartPosition = FormStartPosition.CenterScreen;
-            txbTo.Text = "hoainam@gmail.com";
         }
         private void LoadForm()
         {
-            //txbTo.Text = strValue;
+            txbTo.Text = strValue;
         }
         private void BtnSendMail_Click(object sender, EventArgs e)
         {
@@ -38,13 +37,12 @@ namespace baomatthudientu
             foreach (string s in split)
             {
                 string en;
-                rd = 2;
-                //Mã hóa ở đây
+                //Mã hóa ở đây 
                 switch (rd)
                 {
-                    case 1: // Monoalphabetic
-                        //string en = Vigenere.Encipher(s, (string)Helper.key);
-                        //EnText += en + " ";
+                    case 1: 
+                        en = MonoAlphabeticCipher.Encrypt(s.ToLower(), "dkvqfibjwpescxhtmyauolrgzn");
+                        EnText += en + " ";
                         break;
                     case 2:
                         en = OneTimePad.Encipher(s.ToLower(), OneTimePad.key("DIEUTRINHBICHNGANVANHANHOAINAMQUANGMINH".ToLower(), s.Length));
@@ -73,6 +71,7 @@ namespace baomatthudientu
             string result = "";
             Helper.PushChar(SpecialChar, IndexUpper, temp.Split(), ref result);
             MailBLL.addMail(txbSub.Text, result, txbFrom.Text, txbTo.Text, DateTime.Now, rd);
+            MessageBox.Show("Gửi thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void btnAddress_Click(object sender, EventArgs e)
         {

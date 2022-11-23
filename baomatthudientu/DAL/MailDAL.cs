@@ -34,7 +34,7 @@ namespace baomatthudientu.DAL
         {
             BAOMATTHUDIENTUEntities data = new BAOMATTHUDIENTUEntities();
             var truyvan = from mail in data.Mails
-                          where mail.Sender == email
+                          where mail.Sender == email && mail.Delete == 1
                           select mail ;
             List<MailDTO> listMail = new List<MailDTO>();
             
@@ -60,7 +60,7 @@ namespace baomatthudientu.DAL
         {
             BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
             List<MailDTO> result = new List<MailDTO>();
-            var v = from c in db.Mails where c.Receiver == email select c;
+            var v = from c in db.Mails where c.Receiver == email && c.Delete == 1 select c;
             foreach (Mail item in v)
             {
                 MailDTO dto = new MailDTO(item.Id, item.Subject, item.Context, item.Sender, item.Receiver, item.Time, item.Status, item.Delete, (int)item.NumEn);
@@ -75,7 +75,7 @@ namespace baomatthudientu.DAL
             var v = from c in db.Mails where c.Sender == email select (c.Receiver).Distinct();
             foreach (Mail item in v)
             {
-                MailDTO dto = new MailDTO(item.Id, item.Subject, item.Context, item.Sender, item.Receiver, item.Time, item.Status);
+                MailDTO dto = new MailDTO(item.Id, item.Subject, item.Context, item.Sender, item.Receiver, item.Time, item.Status, item.Delete, (int)item.NumEn);
                 result.Add(dto);
             }
             return result;
@@ -93,6 +93,14 @@ namespace baomatthudientu.DAL
             BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
             var v = (from c in db.Mails where c.Id == id select c.NumEn).SingleOrDefault();
             return (int)v;
+        }
+        public static bool deleteMail(int id)
+        {
+            BAOMATTHUDIENTUEntities db = new BAOMATTHUDIENTUEntities();
+            Mail mail = db.Mails.Find(id);
+            mail.Delete = 0;
+            db.SaveChanges();
+            return true;
         }
     }
 }

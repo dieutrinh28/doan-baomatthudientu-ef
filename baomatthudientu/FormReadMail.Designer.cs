@@ -30,17 +30,17 @@ namespace baomatthudientu
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Thư nhận về");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Thư gửi đi");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Thư đã gửi");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Thư đã xóa");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Thư đang soạn");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Thư điện tử", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Thư nhận về");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Thư gửi đi");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Thư đã gửi");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Thư đã xóa");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Thư đang soạn");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Thư điện tử", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hiểnThịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +52,7 @@ namespace baomatthudientu
             this.button7 = new System.Windows.Forms.Button();
             this.btnAddress = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnCompose = new System.Windows.Forms.Button();
@@ -126,22 +126,23 @@ namespace baomatthudientu
             this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Controls.Add(this.btnAddress);
             this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btnCompose);
             this.groupBox1.Location = new System.Drawing.Point(0, 20);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(600, 49);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // button8
             // 
+            this.button8.Enabled = false;
             this.button8.Location = new System.Drawing.Point(218, 7);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(61, 19);
             this.button8.TabIndex = 7;
@@ -150,8 +151,9 @@ namespace baomatthudientu
             // 
             // button7
             // 
+            this.button7.Enabled = false;
             this.button7.Location = new System.Drawing.Point(491, 7);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(61, 19);
             this.button7.TabIndex = 6;
@@ -160,8 +162,9 @@ namespace baomatthudientu
             // 
             // btnAddress
             // 
+            this.btnAddress.Enabled = false;
             this.btnAddress.Location = new System.Drawing.Point(413, 7);
-            this.btnAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddress.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddress.Name = "btnAddress";
             this.btnAddress.Size = new System.Drawing.Size(74, 19);
             this.btnAddress.TabIndex = 5;
@@ -170,28 +173,30 @@ namespace baomatthudientu
             // 
             // button5
             // 
+            this.button5.Enabled = false;
             this.button5.Location = new System.Drawing.Point(348, 7);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(61, 19);
             this.button5.TabIndex = 4;
             this.button5.Text = "Nhận thư";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnXoa
             // 
-            this.button4.Location = new System.Drawing.Point(283, 7);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(61, 19);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Xóa thư";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(283, 7);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(61, 19);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xóa thư";
+            this.btnXoa.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(150, 7);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 19);
             this.button3.TabIndex = 2;
@@ -200,8 +205,9 @@ namespace baomatthudientu
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(95, 7);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 19);
             this.button2.TabIndex = 1;
@@ -211,7 +217,7 @@ namespace baomatthudientu
             // btnCompose
             // 
             this.btnCompose.Location = new System.Drawing.Point(0, 7);
-            this.btnCompose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCompose.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompose.Name = "btnCompose";
             this.btnCompose.Size = new System.Drawing.Size(91, 19);
             this.btnCompose.TabIndex = 0;
@@ -223,9 +229,9 @@ namespace baomatthudientu
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.treeView1);
             this.groupBox2.Location = new System.Drawing.Point(0, 73);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(173, 252);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
@@ -246,22 +252,22 @@ namespace baomatthudientu
             // treeView1
             // 
             this.treeView1.Location = new System.Drawing.Point(4, 23);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(2);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node1";
-            treeNode1.Text = "Thư nhận về";
-            treeNode2.Name = "Node2";
-            treeNode2.Text = "Thư gửi đi";
-            treeNode3.Name = "Node3";
-            treeNode3.Text = "Thư đã gửi";
-            treeNode4.Name = "Node4";
-            treeNode4.Text = "Thư đã xóa";
-            treeNode5.Name = "Node5";
-            treeNode5.Text = "Thư đang soạn";
-            treeNode6.Name = "Node0";
-            treeNode6.Text = "Thư điện tử";
+            treeNode7.Name = "Node1";
+            treeNode7.Text = "Thư nhận về";
+            treeNode8.Name = "Node2";
+            treeNode8.Text = "Thư gửi đi";
+            treeNode9.Name = "Node3";
+            treeNode9.Text = "Thư đã gửi";
+            treeNode10.Name = "Node4";
+            treeNode10.Text = "Thư đã xóa";
+            treeNode11.Name = "Node5";
+            treeNode11.Text = "Thư đang soạn";
+            treeNode12.Name = "Node0";
+            treeNode12.Text = "Thư điện tử";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6});
+            treeNode12});
             this.treeView1.Size = new System.Drawing.Size(165, 227);
             this.treeView1.TabIndex = 3;
             // 
@@ -275,57 +281,59 @@ namespace baomatthudientu
             this.groupBox3.Controls.Add(this.dgv);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(173, 73);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(427, 252);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
             // lbSubject
             // 
-            this.lbSubject.Location = new System.Drawing.Point(110, 161);
-            this.lbSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbSubject.Location = new System.Drawing.Point(108, 161);
+            this.lbSubject.Margin = new System.Windows.Forms.Padding(2);
             this.lbSubject.Multiline = true;
             this.lbSubject.Name = "lbSubject";
             this.lbSubject.ReadOnly = true;
-            this.lbSubject.Size = new System.Drawing.Size(128, 15);
+            this.lbSubject.Size = new System.Drawing.Size(128, 18);
             this.lbSubject.TabIndex = 13;
             // 
             // lbSender
             // 
-            this.lbSender.Location = new System.Drawing.Point(110, 141);
-            this.lbSender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbSender.Location = new System.Drawing.Point(108, 136);
+            this.lbSender.Margin = new System.Windows.Forms.Padding(2);
             this.lbSender.Multiline = true;
             this.lbSender.Name = "lbSender";
             this.lbSender.ReadOnly = true;
-            this.lbSender.Size = new System.Drawing.Size(128, 15);
+            this.lbSender.Size = new System.Drawing.Size(128, 21);
             this.lbSender.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(26, 161);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 11;
             this.label3.Text = "Chủ đề thư: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(26, 141);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 10;
             this.label2.Text = "Người gửi: ";
             // 
             // txbMail
             // 
             this.txbMail.Location = new System.Drawing.Point(0, 183);
-            this.txbMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbMail.Margin = new System.Windows.Forms.Padding(2);
             this.txbMail.Multiline = true;
             this.txbMail.Name = "txbMail";
             this.txbMail.Size = new System.Drawing.Size(423, 67);
@@ -336,7 +344,7 @@ namespace baomatthudientu
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(0, 23);
-            this.dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv.Margin = new System.Windows.Forms.Padding(2);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 10;
@@ -368,7 +376,7 @@ namespace baomatthudientu
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormReadMail";
             this.Text = "Xem thư";
             this.Load += new System.EventHandler(this.FormReadMail_Load);
@@ -397,7 +405,7 @@ namespace baomatthudientu
         private Button button7;
         private Button btnAddress;
         private Button button5;
-        private Button button4;
+        private Button btnXoa;
         private Button button3;
         private Button button2;
         private Button btnCompose;

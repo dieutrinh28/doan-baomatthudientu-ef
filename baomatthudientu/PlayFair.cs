@@ -11,63 +11,67 @@ namespace baomatthudientu
         public static string Encipher(string PlainText, string key)
         {
             string result = "";
-            List<string> splittedText = Split(PlainText);
-            char[,] matrix = GenerateMatrix(key);
-            foreach (string pair in splittedText)
+            if(PlainText != "")
             {
-                int row1 = 0;
-                int col1 = 0;
-                int row2 = 0;
-                int col2 = 0;
-
-                char l1 = char.ToLower(pair[0]);
-                char l2 = char.ToLower(pair[1]);
-
-                GetPosition(matrix, l1, ref row1, ref col1);
-                GetPosition(matrix, l2, ref row2, ref col2);
-
-                if (row1 == row2)
+                List<string> splittedText = Split(PlainText);
+                char[,] matrix = GenerateMatrix(key);
+                foreach (string pair in splittedText)
                 {
-                    if (col1 == 4)
+                    int row1 = 0;
+                    int col1 = 0;
+                    int row2 = 0;
+                    int col2 = 0;
+
+                    char l1 = char.ToLower(pair[0]);
+                    char l2 = char.ToLower(pair[1]);
+
+                    GetPosition(matrix, l1, ref row1, ref col1);
+                    GetPosition(matrix, l2, ref row2, ref col2);
+
+                    if (row1 == row2)
                     {
-                        result += matrix[row1, 0];
-                        result += matrix[row1, col2 + 1];
+                        if (col1 == 4)
+                        {
+                            result += matrix[row1, 0];
+                            result += matrix[row1, col2 + 1];
+                        }
+                        else if (col2 == 4)
+                        {
+                            result += matrix[row1, col1 + 1];
+                            result += matrix[row1, 0];
+                        }
+                        else
+                        {
+                            result += matrix[row1, col1 + 1];
+                            result += matrix[row1, col2 + 1];
+                        }
                     }
-                    else if (col2 == 4)
+                    else if (col1 == col2)
                     {
-                        result += matrix[row1, col1 + 1];
-                        result += matrix[row1, 0];
+                        if (row1 == 4)
+                        {
+                            result += matrix[0, col1];
+                            result += matrix[row2 + 1, col1];
+                        }
+                        else if (row2 == 4)
+                        {
+                            result += matrix[row1 + 1, col1];
+                            result += matrix[0, col1];
+                        }
+                        else
+                        {
+                            result += matrix[row1 + 1, col1];
+                            result += matrix[row2 + 1, col1];
+                        }
                     }
                     else
                     {
-                        result += matrix[row1, col1 + 1];
-                        result += matrix[row1, col2 + 1];
+                        result += matrix[row1, col2];
+                        result += matrix[row2, col1];
                     }
-                }
-                else if (col1 == col2)
-                {
-                    if (row1 == 4)
-                    {
-                        result += matrix[0, col1];
-                        result += matrix[row2 + 1, col1];
-                    }
-                    else if (row2 == 4)
-                    {
-                        result += matrix[row1 + 1, col1];
-                        result += matrix[0, col1];
-                    }
-                    else
-                    {
-                        result += matrix[row1 + 1, col1];
-                        result += matrix[row2 + 1, col1];
-                    }
-                }
-                else
-                {
-                    result += matrix[row1, col2];
-                    result += matrix[row2, col1];
                 }
             }
+            
 
             return result;
         }

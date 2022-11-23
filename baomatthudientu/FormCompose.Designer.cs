@@ -54,8 +54,6 @@ namespace baomatthudientu
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txbSub = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txbTo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txbFrom = new System.Windows.Forms.TextBox();
@@ -77,33 +75,33 @@ namespace baomatthudientu
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // hệThốngToolStripMenuItem
             // 
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // soạnThảoToolStripMenuItem
             // 
             this.soạnThảoToolStripMenuItem.Name = "soạnThảoToolStripMenuItem";
-            this.soạnThảoToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.soạnThảoToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.soạnThảoToolStripMenuItem.Text = "Soạn thảo";
             // 
             // côngCụToolStripMenuItem
             // 
             this.côngCụToolStripMenuItem.Name = "côngCụToolStripMenuItem";
-            this.côngCụToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.côngCụToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.côngCụToolStripMenuItem.Text = "Công cụ";
             // 
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
             // 
             // groupBox1
@@ -115,20 +113,20 @@ namespace baomatthudientu
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btnSendMail);
-            this.groupBox1.Location = new System.Drawing.Point(0, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(0, 20);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(800, 60);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(600, 49);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // btnAddress
             // 
-            this.btnAddress.Location = new System.Drawing.Point(533, 9);
-            this.btnAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddress.Location = new System.Drawing.Point(400, 7);
+            this.btnAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddress.Name = "btnAddress";
-            this.btnAddress.Size = new System.Drawing.Size(101, 34);
+            this.btnAddress.Size = new System.Drawing.Size(76, 28);
             this.btnAddress.TabIndex = 6;
             this.btnAddress.Text = "Sổ địa chỉ";
             this.btnAddress.UseVisualStyleBackColor = true;
@@ -136,60 +134,65 @@ namespace baomatthudientu
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(429, 9);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Enabled = false;
+            this.button6.Location = new System.Drawing.Point(322, 7);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 34);
+            this.button6.Size = new System.Drawing.Size(74, 28);
             this.button6.TabIndex = 5;
             this.button6.Text = "Đính kèm";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(357, 9);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Enabled = false;
+            this.button5.Location = new System.Drawing.Point(268, 7);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(69, 34);
+            this.button5.Size = new System.Drawing.Size(52, 28);
             this.button5.TabIndex = 4;
             this.button5.Text = "Cut";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(277, 9);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Enabled = false;
+            this.button4.Location = new System.Drawing.Point(208, 7);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(73, 34);
+            this.button4.Size = new System.Drawing.Size(55, 28);
             this.button4.TabIndex = 3;
             this.button4.Text = "Paste";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(187, 9);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(140, 7);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 34);
+            this.button3.Size = new System.Drawing.Size(64, 28);
             this.button3.TabIndex = 2;
             this.button3.Text = "Copy";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(101, 9);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(76, 7);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 34);
+            this.button2.Size = new System.Drawing.Size(60, 28);
             this.button2.TabIndex = 1;
             this.button2.Text = "Ghi thư";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // btnSendMail
             // 
-            this.btnSendMail.Location = new System.Drawing.Point(0, 9);
-            this.btnSendMail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSendMail.Location = new System.Drawing.Point(0, 7);
+            this.btnSendMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSendMail.Name = "btnSendMail";
-            this.btnSendMail.Size = new System.Drawing.Size(95, 34);
+            this.btnSendMail.Size = new System.Drawing.Size(71, 28);
             this.btnSendMail.TabIndex = 0;
             this.btnSendMail.Text = "Gửi thư đi";
             this.btnSendMail.UseVisualStyleBackColor = true;
@@ -206,35 +209,34 @@ namespace baomatthudientu
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.txbSub);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txbTo);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txbFrom);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(0, 90);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(0, 73);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(800, 276);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(600, 224);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // txbMail
             // 
-            this.txbMail.Location = new System.Drawing.Point(83, 160);
-            this.txbMail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbMail.Location = new System.Drawing.Point(62, 130);
+            this.txbMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbMail.Multiline = true;
             this.txbMail.Name = "txbMail";
-            this.txbMail.Size = new System.Drawing.Size(612, 104);
+            this.txbMail.Size = new System.Drawing.Size(460, 85);
             this.txbMail.TabIndex = 15;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(581, 126);
-            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button11.Location = new System.Drawing.Point(436, 102);
+            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(67, 23);
+            this.button11.Size = new System.Drawing.Size(50, 19);
             this.button11.TabIndex = 14;
             this.button11.Text = "Color";
             this.button11.UseVisualStyleBackColor = true;
@@ -242,10 +244,10 @@ namespace baomatthudientu
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Underline);
-            this.button10.Location = new System.Drawing.Point(543, 126);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button10.Location = new System.Drawing.Point(407, 102);
+            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(32, 23);
+            this.button10.Size = new System.Drawing.Size(24, 19);
             this.button10.TabIndex = 13;
             this.button10.Text = "U";
             this.button10.UseVisualStyleBackColor = true;
@@ -253,10 +255,10 @@ namespace baomatthudientu
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic);
-            this.button9.Location = new System.Drawing.Point(505, 126);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button9.Location = new System.Drawing.Point(379, 102);
+            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(32, 23);
+            this.button9.Size = new System.Drawing.Size(24, 19);
             this.button9.TabIndex = 12;
             this.button9.Text = "I";
             this.button9.UseVisualStyleBackColor = true;
@@ -264,10 +266,10 @@ namespace baomatthudientu
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.button8.Location = new System.Drawing.Point(467, 126);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Location = new System.Drawing.Point(350, 102);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(32, 23);
+            this.button8.Size = new System.Drawing.Size(24, 19);
             this.button8.TabIndex = 11;
             this.button8.Text = "B";
             this.button8.UseVisualStyleBackColor = true;
@@ -283,10 +285,10 @@ namespace baomatthudientu
             "14",
             "15",
             "16"});
-            this.comboBox2.Location = new System.Drawing.Point(387, 126);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Location = new System.Drawing.Point(290, 102);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(49, 24);
+            this.comboBox2.Size = new System.Drawing.Size(38, 21);
             this.comboBox2.TabIndex = 10;
             this.comboBox2.Text = "10";
             // 
@@ -297,73 +299,59 @@ namespace baomatthudientu
             "MS Serif",
             "Time New ",
             "Calbri"});
-            this.comboBox1.Location = new System.Drawing.Point(213, 126);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Location = new System.Drawing.Point(160, 102);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 24);
+            this.comboBox1.Size = new System.Drawing.Size(114, 21);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.Text = "MS Serif";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(101, 127);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox1.Location = new System.Drawing.Point(76, 103);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(77, 20);
+            this.checkBox1.Size = new System.Drawing.Size(65, 17);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "Thư mật";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // txbSub
             // 
-            this.txbSub.Location = new System.Drawing.Point(147, 90);
-            this.txbSub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbSub.Location = new System.Drawing.Point(110, 73);
+            this.txbSub.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbSub.Multiline = true;
             this.txbSub.Name = "txbSub";
-            this.txbSub.Size = new System.Drawing.Size(548, 19);
+            this.txbSub.Size = new System.Drawing.Size(412, 16);
             this.txbSub.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 90);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(40, 73);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Subject";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(147, 66);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(548, 19);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Cc";
-            // 
             // txbTo
             // 
-            this.txbTo.Location = new System.Drawing.Point(147, 44);
-            this.txbTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbTo.Location = new System.Drawing.Point(110, 43);
+            this.txbTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbTo.Multiline = true;
             this.txbTo.Name = "txbTo";
-            this.txbTo.Size = new System.Drawing.Size(548, 19);
+            this.txbTo.Size = new System.Drawing.Size(412, 16);
             this.txbTo.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 44);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 43);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 16);
             this.label2.TabIndex = 2;
@@ -371,17 +359,20 @@ namespace baomatthudientu
             // 
             // txbFrom
             // 
-            this.txbFrom.Location = new System.Drawing.Point(147, 22);
-            this.txbFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbFrom.Location = new System.Drawing.Point(110, 18);
+            this.txbFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbFrom.Multiline = true;
             this.txbFrom.Name = "txbFrom";
-            this.txbFrom.Size = new System.Drawing.Size(548, 19);
+            this.txbFrom.Size = new System.Drawing.Size(412, 17);
             this.txbFrom.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 22);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(40, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 0;
@@ -389,34 +380,34 @@ namespace baomatthudientu
             // 
             // txtTimeNow
             // 
-            this.txtTimeNow.Location = new System.Drawing.Point(421, 370);
-            this.txtTimeNow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTimeNow.Location = new System.Drawing.Point(316, 301);
+            this.txtTimeNow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTimeNow.Name = "txtTimeNow";
             this.txtTimeNow.ReadOnly = true;
-            this.txtTimeNow.Size = new System.Drawing.Size(380, 22);
+            this.txtTimeNow.Size = new System.Drawing.Size(286, 20);
             this.txtTimeNow.TabIndex = 17;
             // 
             // txtDayNow
             // 
-            this.txtDayNow.Location = new System.Drawing.Point(0, 370);
-            this.txtDayNow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDayNow.Location = new System.Drawing.Point(0, 301);
+            this.txtDayNow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDayNow.Name = "txtDayNow";
             this.txtDayNow.ReadOnly = true;
-            this.txtDayNow.Size = new System.Drawing.Size(415, 22);
+            this.txtDayNow.Size = new System.Drawing.Size(312, 20);
             this.txtDayNow.TabIndex = 16;
             // 
             // FormCompose
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 391);
+            this.ClientSize = new System.Drawing.Size(600, 318);
             this.Controls.Add(this.txtDayNow);
             this.Controls.Add(this.txtTimeNow);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCompose";
             this.Text = "Soạn thư";
             this.Load += new System.EventHandler(this.FormCompose_Load);
@@ -448,8 +439,6 @@ namespace baomatthudientu
         private GroupBox groupBox2;
         private TextBox txbSub;
         private Label label4;
-        private TextBox textBox3;
-        private Label label3;
         private TextBox txbTo;
         private Label label2;
         private TextBox txbFrom;

@@ -8,7 +8,7 @@ namespace baomatthudientu
 {
     internal class MonoAlphabeticCipher
     {
-        static string Encrypt(string plainText, string key)
+        public static string Encrypt(string plainText, string key)
         {
 
             char[] chars = new char[plainText.Length];
@@ -27,7 +27,7 @@ namespace baomatthudientu
 
             return new string(chars);
         }
-        static string Decrypt(string cipherText, string key)
+        public static string Decrypt(string cipherText, string key)
         {
             char[] chars = new char[cipherText.Length];
             if(cipherText != "")

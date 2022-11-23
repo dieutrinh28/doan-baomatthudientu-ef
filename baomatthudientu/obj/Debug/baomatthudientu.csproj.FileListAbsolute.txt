@@ -111,3 +111,4 @@ C:\Users\Admin\Desktop\New folder (4)\doan-baomatthudientu-ef\baomatthudientu\ob
 C:\Users\Admin\Desktop\New folder (4)\doan-baomatthudientu-ef\baomatthudientu\obj\Debug\baomatthudientu.csproj.CopyComplete
 C:\Users\Admin\Desktop\New folder (4)\doan-baomatthudientu-ef\baomatthudientu\obj\Debug\baomatthudientu.exe
 C:\Users\Admin\Desktop\New folder (4)\doan-baomatthudientu-ef\baomatthudientu\obj\Debug\baomatthudientu.pdb
+C:\Users\Admin\Desktop\New folder (3)\doan-baomatthudientu-ef\baomatthudientu\obj\Debug\baomatthudientu.FormSelectAddress.resources

@@ -34,5 +34,9 @@ namespace baomatthudientu.BLL
         {
             return MailDAL.getNumEn(id);
         }
+        public static bool deleteMail(int id)
+        {
+            return MailDAL.deleteMail(id);
+        }
     }
 }

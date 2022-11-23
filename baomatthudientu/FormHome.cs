@@ -65,7 +65,9 @@ namespace baomatthudientu
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            FormLogin frm = new FormLogin();
+            frm.Show();
+            this.Close();
         }
 
     }
