@@ -5,34 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using baomatthudientu.DTO;
 
-namespace baomatthudientu
+namespace baomatthudientu.Lớp_hỗ_trợ
 {
-    class SpecialCharacter
-    {
-        public char c { get; set; }
-        public int indexString { get; set; }
-        public int indexInsert { get; set; }
-        public SpecialCharacter(char c, int indexString, int indexInsert)
-        {
-            this.c = c;
-            this.indexString = indexString;
-            this.indexInsert = indexInsert;
-        }
-    }
-    class UpperCharacter
-    {
-        public int indexString { get; set; }
-        public int indexUpper { get; set; }
-        public UpperCharacter(int indexString, int indexUpper)
-        {
-            this.indexUpper = indexUpper;
-            this.indexString = indexString;
-        }
-    }
-    internal class Helper
+    class Helper
     {
         public static string emailUser { get; set; }
-        public static object key { get; set; }
         public static void PopChar(ref List<SpecialCharacter> SpecialChar, ref List<UpperCharacter> IndexUpper, ref string[] split)
         {
             for (int m = 0; m < split.Length; m++)

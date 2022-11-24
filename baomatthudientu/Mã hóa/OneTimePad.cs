@@ -10,7 +10,6 @@ namespace baomatthudientu
     {
         public static string key(string key, int textLength)
         {
-            //string text = "DIEUTRINHBICHNGANVANHANHOAINAMQUANGMINH";
             key = key.Substring(0, textLength);
             return key;
         }

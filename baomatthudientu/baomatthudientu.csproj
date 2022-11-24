@@ -112,20 +112,22 @@
     <Compile Include="FormSelectAddress.Designer.cs">
       <DependentUpon>FormSelectAddress.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper.cs" />
+    <Compile Include="Lớp hỗ trợ\Helper.cs" />
+    <Compile Include="Lớp hỗ trợ\SpecialChacracter.cs" />
+    <Compile Include="Lớp hỗ trợ\UpperCharacter.cs" />
     <Compile Include="Mail.cs">
       <DependentUpon>BMTDT.tt</DependentUpon>
     </Compile>
-    <Compile Include="MonoAlphabeticCipher.cs" />
-    <Compile Include="OneTimePad.cs" />
-    <Compile Include="PlayFair.cs" />
+    <Compile Include="Mã hóa\MonoAlphabeticCipher.cs" />
+    <Compile Include="Mã hóa\OneTimePad.cs" />
+    <Compile Include="Mã hóa\PlayFair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RailFence.cs" />
+    <Compile Include="Mã hóa\RailFence.cs" />
     <Compile Include="User.cs">
       <DependentUpon>BMTDT.tt</DependentUpon>
     </Compile>
-    <Compile Include="Vigenere.cs" />
+    <Compile Include="Mã hóa\Vigenere.cs" />
     <EmbeddedResource Include="FormCompose.resx">
       <DependentUpon>FormCompose.cs</DependentUpon>
     </EmbeddedResource>
